@@ -1,0 +1,12 @@
+{
+  "name": "SMS",
+  "version": "1.0.0",
+  "author": "eldwin",
+  "description": "REST server for iPhone to post received SMSes to and Comet server to push them to browser for desktop notifications.",
+  "dependencies":
+  {
+    "express": ">= 2.5.8",
+    "socket.io": ">= 0.8.7"
+  },
+  "engine": "node >= 0.6.10"
+}

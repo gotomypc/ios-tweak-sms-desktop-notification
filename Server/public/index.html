@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SMS</title>
+		<link rel="icon" type="image/png" href="icon.png">
+		
+		<script src="/socket.io/socket.io.js"></script>
+		<script>
+			var port = 8888;
+			var host = 'http://localhost';
+			
+			var socket = io.connect( host + ':' + port );
+		  
+			socket.on( 'sms', function( data )
+			{
+				var notification = window.webkitNotifications.createNotification( 'icon.png', data.name + ' ( ' + data.address + ' )', data.message );
+				notification.show();
+			});
+			
+			socket.on( 'disconnect', function()
+			{
+			});
+		</script>
+	</head>
+	
+	<body>
+		<button onClick="window.webkitNotifications.requestPermission();">Enable Desktop Notifications</button>
+	</body>
+</html>

@@ -1,0 +1,9 @@
+Package: com.eldwin.smsdesktopnotifications
+Name: SMSDesktopNotifications
+Depends: mobilesubstrate
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: POSTs SMSes to a REST Server when received.
+Maintainer: eldwin 
+Author: eldwin 
+Section: Tweaks
